@@ -1,0 +1,214 @@
+[
+  {
+    "id": "customs",
+    "name_en": "Customs",
+    "name_ko": "세관",
+    "svg": "Customs.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1062.4827,
+      535.17401
+    ],
+    "floors": [
+      "Underground_Level",
+      "Garage",
+      "Ground_Level",
+      "First_Floor",
+      "Second_Floor",
+      "Third_Floor"
+    ],
+    "width": 1062.4827,
+    "height": 535.17401
+  },
+  {
+    "id": "factory",
+    "name_en": "Factory",
+    "name_ko": "공장",
+    "svg": "Factory.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      130.81831,
+      141.23242
+    ],
+    "floors": [
+      "Basement",
+      "Ground_Floor",
+      "Second_Floor",
+      "Third_Floor"
+    ],
+    "width": 130.81831,
+    "height": 141.23242
+  },
+  {
+    "id": "woods",
+    "name_en": "Woods",
+    "name_ko": "우드",
+    "svg": "Woods.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1472.7926,
+      1420.5995
+    ],
+    "floors": [
+      "Ground_Level"
+    ],
+    "width": 1472.7926,
+    "height": 1420.5995
+  },
+  {
+    "id": "shoreline",
+    "name_en": "Shoreline",
+    "name_ko": "쇼어라인",
+    "svg": "Shoreline.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1559.5717,
+      1032.4935
+    ],
+    "floors": [
+      "Underground_Level",
+      "Ground_Level",
+      "First_Floor",
+      "Second_Floor",
+      "Third_Floor"
+    ],
+    "width": 1559.5717,
+    "height": 1032.4935
+  },
+  {
+    "id": "interchange",
+    "name_en": "Interchange",
+    "name_ko": "인터체인지",
+    "svg": "Interchange.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1127.6852,
+      947.02582
+    ],
+    "floors": [
+      "Garage",
+      "Ground_Level",
+      "First_Floor",
+      "Second_Floor"
+    ],
+    "width": 1127.6852,
+    "height": 947.02582
+  },
+  {
+    "id": "reserve",
+    "name_en": "Reserve",
+    "name_ko": "리저브",
+    "svg": "Reserve.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      827.28742,
+      761.16437
+    ],
+    "floors": [
+      "Bunkers",
+      "Ground_Level"
+    ],
+    "width": 827.28742,
+    "height": 761.16437
+  },
+  {
+    "id": "lighthouse",
+    "name_en": "Lighthouse",
+    "name_ko": "등대",
+    "svg": "Lighthouse.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1059.3752,
+      1722.9499
+    ],
+    "floors": [
+      "Ground_Level"
+    ],
+    "width": 1059.3752,
+    "height": 1722.9499
+  },
+  {
+    "id": "streetsoftarkov",
+    "name_en": "Streets of Tarkov",
+    "name_ko": "타르코프 시내",
+    "svg": "StreetsOfTarkov.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      605.32395,
+      831.57753
+    ],
+    "floors": [
+      "Underground_Level",
+      "Ground_Level",
+      "First_Floor",
+      "Second_Floor",
+      "Third_Floor"
+    ],
+    "width": 605.32395,
+    "height": 831.57753
+  },
+  {
+    "id": "groundzero",
+    "name_en": "Ground Zero",
+    "name_ko": "그라운드 제로",
+    "svg": "GroundZero.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      348.92543,
+      488.44792
+    ],
+    "floors": [
+      "Underground_Level",
+      "Ground_Level",
+      "First_Floor",
+      "Second_Floor",
+      "Third_Floor"
+    ],
+    "width": 348.92543,
+    "height": 488.44792
+  },
+  {
+    "id": "lab",
+    "name_en": "The Lab",
+    "name_ko": "더 랩",
+    "svg": "Labs.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      720.0,
+      586.0
+    ],
+    "floors": [
+      "Ground_Level"
+    ],
+    "width": 720.0,
+    "height": 586.0
+  },
+  {
+    "id": "terminal",
+    "name_en": "Terminal",
+    "name_ko": "터미널",
+    "svg": "Terminal.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      887.70096,
+      1043.9554
+    ],
+    "floors": [
+      "Ground_Level",
+      "First_Floor"
+    ],
+    "width": 887.70096,
+    "height": 1043.9554
+  }
+]

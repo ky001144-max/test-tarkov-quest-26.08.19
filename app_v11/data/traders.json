@@ -1,0 +1,62 @@
+[
+  {
+    "id": "prapor",
+    "name_en": "Prapor",
+    "name_ko": "프라포르",
+    "icon": "prapor.png"
+  },
+  {
+    "id": "therapist",
+    "name_en": "Therapist",
+    "name_ko": "테라피스트",
+    "icon": "therapist.png"
+  },
+  {
+    "id": "skier",
+    "name_en": "Skier",
+    "name_ko": "스키어",
+    "icon": "skier.png"
+  },
+  {
+    "id": "peacekeeper",
+    "name_en": "Peacekeeper",
+    "name_ko": "피스키퍼",
+    "icon": "peacekeeper.png"
+  },
+  {
+    "id": "mechanic",
+    "name_en": "Mechanic",
+    "name_ko": "메카닉",
+    "icon": "mechanic.png"
+  },
+  {
+    "id": "ragman",
+    "name_en": "Ragman",
+    "name_ko": "래그맨",
+    "icon": "ragman.png"
+  },
+  {
+    "id": "jaeger",
+    "name_en": "Jaeger",
+    "name_ko": "예거",
+    "icon": "jaeger.png"
+  },
+  {
+    "id": "fence",
+    "name_en": "Fence",
+    "name_ko": "펜스",
+    "icon": "fence.png"
+  },
+  {
+    "id": "ref",
+    "name_en": "Ref",
+    "name_ko": "레프",
+    "icon": "ref.png"
+  },
+  {
+    "id": "btr",
+    "name_en": "BTR Driver",
+    "name_ko": "BTR 운전수",
+    "icon": "btr.png"
+  }
+]

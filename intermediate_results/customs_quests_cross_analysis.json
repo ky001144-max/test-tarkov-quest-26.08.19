@@ -1,0 +1,14 @@
+{
+  "wiki_total": 514,
+  "wiki_customs_total": 62,
+  "tarkov_dev_customs_total": 68,
+  "tarkov_dev_wiki_overlap_count": 0,
+  "tarkov_dev_wiki_overlap_percentage": 0.0,
+  "market_customs_total": 1,
+  "market_wiki_overlap_count": 1,
+  "market_wiki_overlap_percentage": 1.6,
+  "tarkov_dev_overlapping_quests": [],
+  "market_overlapping_quests": [
+    "Setup"
+  ]
+}

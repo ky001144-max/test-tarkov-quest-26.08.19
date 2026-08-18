@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타르코프 퀘스트 가이드 | EFT Interactive Quest Map</title>
+  <!-- Google Fonts: Inter & Rajdhani for Tactical Feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="libs/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet JS -->
+  <script src="libs/leaflet/leaflet.js"></script>
+</head>
+<body>
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo-group">
+        <i class="fa-solid fa-crosshairs logo-icon"></i>
+        <div class="logo-text">
+          <span class="logo-title">TARKOV QUEST GUIDE</span>
+          <span class="logo-sub">인터랙티브 맵 & 퀘스트 네비게이터</span>
+        </div>
+      </div>
+
+      <!-- Map Selector Dropdown -->
+      <div class="map-select-wrapper">
+        <label for="map-select"><i class="fa-solid fa-map-location-dot"></i> 맵 선택</label>
+        <select id="map-select" class="tactical-select">
+          <!-- Options populated by JS -->
+        </select>
+      </div>
+    </div>
+
+    <!-- Trader Filter Tabs -->
+    <div class="trader-tabs-wrapper" id="trader-tabs">
+      <button class="trader-tab active" data-trader="all">
+        <span class="tab-badge">전체</span>
+      </button>
+      <!-- Populated by JS: Prapor, Therapist, Skier, Peacekeeper, Mechanic, Ragman, Jaeger, Fence -->
+    </div>
+
+    <div class="header-right">
+      <!-- Quest Progress Stats -->
+      <div class="progress-container">
+        <div class="progress-labels">
+          <span class="progress-title"><i class="fa-solid fa-trophy"></i> 진행도</span>
+          <span class="progress-val" id="progress-percent">0%</span>
+          <span class="progress-count" id="progress-count">(0/0)</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main 2-Column Layout -->
+  <main class="main-container">
+    <!-- Left Panel: Interactive Map Viewer -->
+    <section class="map-section" id="map-section">
+      <!-- Map Controls Overlay -->
+      <div class="map-controls-top">
+        <div class="current-map-badge" id="current-map-title">
+          <i class="fa-solid fa-map"></i> <span id="map-name-text">세관 (Customs)</span>
+        </div>
+
+        <!-- Floors/Layers Selector -->
+        <div class="floors-container" id="floors-container">
+          <span class="floor-label"><i class="fa-solid fa-layer-group"></i> 층(Floor):</span>
+          <div class="floor-buttons" id="floor-buttons">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Marker Legend & Count -->
+        <div class="map-marker-count" id="map-marker-count">
+          <i class="fa-solid fa-location-dot"></i> 마커 <strong id="marker-num">0</strong>개
+        </div>
+      </div>
+
+      <!-- Map Floating Action Buttons (Zoom / Reset) -->
+      <div class="map-floating-controls">
+        <button id="btn-zoom-in" class="map-fab" title="확대 (+)"><i class="fa-solid fa-plus"></i></button>
+        <button id="btn-zoom-out" class="map-fab" title="축소 (-)"><i class="fa-solid fa-minus"></i></button>
+        <button id="btn-zoom-reset" class="map-fab" title="화면 맞춤 / 리셋"><i class="fa-solid fa-arrows-to-dot"></i></button>
+        <button id="btn-toggle-markers" class="map-fab active" title="마커 토글"><i class="fa-solid fa-eye"></i></button>
+      </div>
+
+      <!-- Interactive Leaflet Map Viewport -->
+      <div class="map-viewport" id="map-viewport">
+        <div id="map-leaflet-container" class="map-leaflet-container"></div>
+      </div>
+
+      <!-- Map Coordinates / Status Footer -->
+      <div class="map-footer-status">
+        <div class="status-left">
+          <span class="status-tip"><i class="fa-solid fa-computer-mouse"></i> 드래그: 지도 이동 | 휠: 확대/축소 | 퀘스트 목표 클릭 시 해당 위치로 자동 포커스</span>
+        </div>
+        <div class="status-right" id="map-scale-text">
+          배율: 100%
+        </div>
+      </div>
+
+      <!-- Hover Tooltip -->
+      <div class="map-tooltip" id="map-tooltip"></div>
+    </section>
+
+    <!-- Right Panel: Quest Navigator & List -->
+    <section class="quest-section" id="quest-section">
+      <!-- Quest Search & Filter Bar -->
+      <div class="quest-filter-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="quest-search-input" placeholder="퀘스트명, 목표, 아이템 검색...">
+          <button id="btn-clear-search" class="btn-clear" title="검색어 초기화"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="filter-toggles">
+          <label class="toggle-checkbox">
+            <input type="checkbox" id="toggle-uncompleted-only">
+            <span class="checkmark"></span>
+            <span class="toggle-label">미완료만 보기</span>
+          </label>
+          <label class="toggle-checkbox">
+            <input type="checkbox" id="toggle-has-gps-only">
+            <span class="checkmark"></span>
+            <span class="toggle-label">맵 위치(GPS) 있는 퀘스트만</span>
+          </label>
+        </div>
+
+        <div class="quest-list-summary">
+          <span>검색 결과: <strong id="filtered-quest-count">0</strong>개 퀘스트</span>
+          <button id="btn-collapse-all" class="btn-text-action" title="전체 접기/펼치기"><i class="fa-solid fa-compress"></i> 접기/펼치기</button>
+        </div>
+      </div>
+
+      <!-- Quest List Container -->
+      <div class="quest-list-container" id="quest-list-container">
+        <!-- Quest Cards populated by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="map_viewer.js"></script>
+  <script src="quest_manager.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

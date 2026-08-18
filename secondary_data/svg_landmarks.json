@@ -1,0 +1,233 @@
+{
+  "customs": {
+    "file": "Customs.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1062.4827,
+      535.17401
+    ],
+    "landmarks": {
+      "3s-1f": {
+        "pixelX": 3.0,
+        "pixelY": -1.0,
+        "leftPercent": 0.28,
+        "topPercent": -0.19,
+        "bbox": [
+          3.0,
+          -1.0,
+          3.0,
+          -1.0
+        ]
+      },
+      "3s-1f-locked": {
+        "pixelX": 3.0,
+        "pixelY": -1.0,
+        "leftPercent": 0.28,
+        "topPercent": -0.19,
+        "bbox": [
+          3.0,
+          -1.0,
+          3.0,
+          -1.0
+        ]
+      },
+      "2s-1f": {
+        "pixelX": 2.0,
+        "pixelY": -1.0,
+        "leftPercent": 0.19,
+        "topPercent": -0.19,
+        "bbox": [
+          2.0,
+          -1.0,
+          2.0,
+          -1.0
+        ]
+      },
+      "2s-1f-locked": {
+        "pixelX": 2.0,
+        "pixelY": -1.0,
+        "leftPercent": 0.19,
+        "topPercent": -0.19,
+        "bbox": [
+          2.0,
+          -1.0,
+          2.0,
+          -1.0
+        ]
+      },
+      "3s-2f": {
+        "pixelX": 3.0,
+        "pixelY": -2.0,
+        "leftPercent": 0.28,
+        "topPercent": -0.37,
+        "bbox": [
+          3.0,
+          -2.0,
+          3.0,
+          -2.0
+        ]
+      },
+      "3s-2f-locked": {
+        "pixelX": 3.0,
+        "pixelY": -2.0,
+        "leftPercent": 0.28,
+        "topPercent": -0.37,
+        "bbox": [
+          3.0,
+          -2.0,
+          3.0,
+          -2.0
+        ]
+      },
+      "2s-2f": {
+        "pixelX": 2.0,
+        "pixelY": -2.0,
+        "leftPercent": 0.19,
+        "topPercent": -0.37,
+        "bbox": [
+          2.0,
+          -2.0,
+          2.0,
+          -2.0
+        ]
+      },
+      "2s-2f-locked": {
+        "pixelX": 2.0,
+        "pixelY": -2.0,
+        "leftPercent": 0.19,
+        "topPercent": -0.37,
+        "bbox": [
+          2.0,
+          -2.0,
+          2.0,
+          -2.0
+        ]
+      },
+      "3s-3f": {
+        "pixelX": 3.0,
+        "pixelY": -3.0,
+        "leftPercent": 0.28,
+        "topPercent": -0.56,
+        "bbox": [
+          3.0,
+          -3.0,
+          3.0,
+          -3.0
+        ]
+      },
+      "3s-3f-locked": {
+        "pixelX": 3.0,
+        "pixelY": -3.0,
+        "leftPercent": 0.28,
+        "topPercent": -0.56,
+        "bbox": [
+          3.0,
+          -3.0,
+          3.0,
+          -3.0
+        ]
+      }
+    }
+  },
+  "factory": {
+    "file": "Factory.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      130.81831,
+      141.23242
+    ],
+    "landmarks": {}
+  },
+  "groundzero": {
+    "file": "GroundZero.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      348.92543,
+      488.44792
+    ],
+    "landmarks": {}
+  },
+  "interchange": {
+    "file": "Interchange.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1127.6852,
+      947.02582
+    ],
+    "landmarks": {}
+  },
+  "labs": {
+    "file": "Labs.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      720.0,
+      586.0
+    ],
+    "landmarks": {}
+  },
+  "lighthouse": {
+    "file": "Lighthouse.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1059.3752,
+      1722.9499
+    ],
+    "landmarks": {}
+  },
+  "reserve": {
+    "file": "Reserve.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      827.28742,
+      761.16437
+    ],
+    "landmarks": {}
+  },
+  "shoreline": {
+    "file": "Shoreline.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1559.5717,
+      1032.4935
+    ],
+    "landmarks": {}
+  },
+  "streetsoftarkov": {
+    "file": "StreetsOfTarkov.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      605.32395,
+      831.57753
+    ],
+    "landmarks": {}
+  },
+  "terminal": {
+    "file": "Terminal.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      887.70096,
+      1043.9554
+    ],
+    "landmarks": {}
+  },
+  "woods": {
+    "file": "Woods.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      1472.7926,
+      1420.5995
+    ],
+    "landmarks": {}
+  }
+}

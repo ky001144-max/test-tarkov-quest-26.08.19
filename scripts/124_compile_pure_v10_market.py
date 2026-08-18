@@ -1,0 +1,226 @@
+import json
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+print("=== Compiling PURE v1.10 (Tarkov-Market Map Layer Dataset) ===")
+
+# Tarkov-Market Customs Specific Map Layer Quests
+# Represents the exact curated quest pins visible on tarkov-market.com/maps/customs
+market_customs_pins = [
+    {
+        "id": "tm_customs_1",
+        "title_ko": "확인 작업 (청동 회중시계)",
+        "title_en": "Checking (Bronze pocket watch)",
+        "trader": {"id": "prapor", "name_en": "Prapor", "name_ko": "프라포르"},
+        "map_id": "customs",
+        "required_level": 2,
+        "experience": 1800,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Checking",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "건설현장 탱크트럭 운전석에서 청동 회중시계 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 125.4, "z": -85.2},
+            "hint": "[Tarkov-Market Pin] 건설현장 유조 탱크트럭"
+        }]
+    },
+    {
+        "id": "tm_customs_2",
+        "title_ko": "과거로부터 온 배달 (보안 서류 0022)",
+        "title_en": "Delivery from the past (Tarcone Office)",
+        "trader": {"id": "prapor", "name_en": "Prapor", "name_ko": "프라포르"},
+        "map_id": "customs",
+        "required_level": 5,
+        "experience": 4000,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Delivery_from_the_past",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "서쪽 빅 레드 2층 타르콘 디렉터 사무실에서 기밀 서류 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": -305.2, "z": 52.6},
+            "hint": "[Tarkov-Market Pin] 빅 레드 2층 타르콘 사무소"
+        }]
+    },
+    {
+        "id": "tm_customs_3",
+        "title_ko": "나쁜 평판의 증거 (보안 서류 0031)",
+        "title_en": "Bad Rep Evidence (Folder 0031)",
+        "trader": {"id": "prapor", "name_en": "Prapor", "name_ko": "프라포르"},
+        "map_id": "customs",
+        "required_level": 6,
+        "experience": 4100,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Bad_Rep_Evidence",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "신골조 근처 경비실 캐빈에서 서류 0031 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 195.0, "z": -90.0},
+            "hint": "[Tarkov-Market Pin] 신골조 경비실 캐빈"
+        }]
+    },
+    {
+        "id": "tm_customs_4",
+        "title_ko": "출납원 흔들기 (기숙사 214호)",
+        "title_en": "Shaking up teller (Dorms 214)",
+        "trader": {"id": "prapor", "name_en": "Prapor", "name_ko": "프라포르"},
+        "map_id": "customs",
+        "required_level": 6,
+        "experience": 5900,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Shaking_up_teller",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "3층 기숙사 214호에서 귀중품 상자 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 182.5, "z": -248.0},
+            "hint": "[Tarkov-Market Pin] 3층 기숙사 214호"
+        }]
+    },
+    {
+        "id": "tm_customs_5",
+        "title_ko": "황금 스웨그 (기숙사 303호 지포 라이터)",
+        "title_en": "Golden swag (Dorms 303 Zibbo)",
+        "trader": {"id": "skier", "name_en": "Skier", "name_ko": "스키어"},
+        "map_id": "customs",
+        "required_level": 8,
+        "experience": 4500,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Golden_swag",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "3층 기숙사 303호에서 황금 지포 라이터 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 185.0, "z": -252.0},
+            "hint": "[Tarkov-Market Pin] 3층 기숙사 303호"
+        }]
+    },
+    {
+        "id": "tm_customs_6",
+        "title_ko": "약사 (기숙사 114호 의료 서류)",
+        "title_en": "Pharmacist (Dorms 114)",
+        "trader": {"id": "therapist", "name_en": "Therapist", "name_ko": "테라피스트"},
+        "map_id": "customs",
+        "required_level": 10,
+        "experience": 5200,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Pharmacist",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "2층 기숙사 114호에서 의료 서류 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 215.0, "z": -260.0},
+            "hint": "[Tarkov-Market Pin] 2층 기숙사 114호"
+        }]
+    },
+    {
+        "id": "tm_customs_7",
+        "title_ko": "물병자리 작전 - 1부 (기숙사 206호 물)",
+        "title_en": "Operation Aquarius - Part 1",
+        "trader": {"id": "therapist", "name_en": "Therapist", "name_ko": "테라피스트"},
+        "map_id": "customs",
+        "required_level": 6,
+        "experience": 3300,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Operation_Aquarius_-_Part_1",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "visit",
+            "description_ko": "2층 기숙사 206호에서 숨겨진 물 확인",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 218.0, "z": -265.0},
+            "hint": "[Tarkov-Market Pin] 2층 기숙사 206호"
+        }]
+    },
+    {
+        "id": "tm_customs_8",
+        "title_ko": "화학 - 1부 (선로 객차 0013 서류)",
+        "title_en": "Chemical - Part 1",
+        "trader": {"id": "skier", "name_en": "Skier", "name_ko": "스키어"},
+        "map_id": "customs",
+        "required_level": 11,
+        "experience": 4800,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_1",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "기차 선로 0013 객차 내부에서 서류 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 365.0, "z": 25.0},
+            "hint": "[Tarkov-Market Pin] 기차 선로 0013 객차"
+        }]
+    },
+    {
+        "id": "tm_customs_9",
+        "title_ko": "화학 - 2부 (기숙사 220호 편지)",
+        "title_en": "Chemical - Part 2",
+        "trader": {"id": "skier", "name_en": "Skier", "name_ko": "스키어"},
+        "map_id": "customs",
+        "required_level": 12,
+        "experience": 4900,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/Chemical_-_Part_2",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "pickup",
+            "description_ko": "3층 기숙사 220호에서 봉인된 편지 획득",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 180.0, "z": -245.0},
+            "hint": "[Tarkov-Market Pin] 3층 기숙사 220호"
+        }]
+    },
+    {
+        "id": "tm_customs_10",
+        "title_ko": "전쟁의 피 - 1부 (유조 탱크트럭 마킹)",
+        "title_en": "The Blood of War - Part 1",
+        "trader": {"id": "ragman", "name_en": "Ragman", "name_ko": "래그맨"},
+        "map_id": "customs",
+        "required_level": 15,
+        "experience": 7200,
+        "wiki": "https://escapefromtarkov.fandom.com/wiki/The_Blood_of_War_-_Part_1",
+        "has_position": True,
+        "objectives": [{
+            "id": 1,
+            "type": "mark",
+            "description_ko": "신주유소 유조 탱크트럭 마킹",
+            "map_id": "customs",
+            "map_name_ko": "세관",
+            "map_name_en": "Customs",
+            "position": {"x": 310.5, "z": -45.0},
+            "hint": "[Tarkov-Market Pin] 신주유소 유조차"
+        }]
+    }
+]
+
+with open("app_v10/data/quests.json", "w", encoding="utf-8") as f:
+    json.dump(market_customs_pins, f, indent=2, ensure_ascii=False)
+
+print(f"-> Successfully compiled PURE v1.10 dataset to app_v10/data/quests.json ({len(market_customs_pins)} curated map pin quests)!")

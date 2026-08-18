@@ -1,0 +1,110 @@
+[
+  {
+    "id": "factory",
+    "name_en": "Factory",
+    "name_ko": "공장",
+    "svg": "Factory.svg",
+    "floors": [
+      "Basement",
+      "Ground_Floor",
+      "First_Floor",
+      "Second_Floor"
+    ]
+  },
+  {
+    "id": "customs",
+    "name_en": "Customs",
+    "name_ko": "세관",
+    "svg": "Customs.svg",
+    "floors": [
+      "Ground_Level"
+    ]
+  },
+  {
+    "id": "woods",
+    "name_en": "Woods",
+    "name_ko": "우드",
+    "svg": "Woods.svg",
+    "floors": [
+      "Ground_Level"
+    ]
+  },
+  {
+    "id": "shoreline",
+    "name_en": "Shoreline",
+    "name_ko": "쇼어라인",
+    "svg": "Shoreline.svg",
+    "floors": [
+      "Ground_Level",
+      "Underground_Level",
+      "First_Floor",
+      "Second_Floor",
+      "Third_Floor"
+    ]
+  },
+  {
+    "id": "interchange",
+    "name_en": "Interchange",
+    "name_ko": "인터체인지",
+    "svg": "Interchange.svg",
+    "floors": [
+      "Garage",
+      "Ground_Floor",
+      "First_Floor"
+    ]
+  },
+  {
+    "id": "lab",
+    "name_en": "The Lab",
+    "name_ko": "더 랩",
+    "svg": "Labs.svg",
+    "floors": [
+      "Basement",
+      "Ground_Floor",
+      "First_Floor",
+      "Second_Floor"
+    ]
+  },
+  {
+    "id": "reserve",
+    "name_en": "Reserve",
+    "name_ko": "리저브",
+    "svg": "Reserve.svg",
+    "floors": [
+      "Ground_Level",
+      "Bunkers"
+    ]
+  },
+  {
+    "id": "lighthouse",
+    "name_en": "Lighthouse",
+    "name_ko": "등대",
+    "svg": "Lighthouse.svg",
+    "floors": [
+      "Ground_Level"
+    ]
+  },
+  {
+    "id": "streetsoftarkov",
+    "name_en": "Streets of Tarkov",
+    "name_ko": "타르코프 시내",
+    "svg": "StreetsOfTarkov.svg",
+    "floors": [
+      "Ground_Level",
+      "Ground_Floor",
+      "First_Floor"
+    ]
+  },
+  {
+    "id": "groundzero",
+    "name_en": "Ground Zero",
+    "name_ko": "그라운드 제로",
+    "svg": "GroundZero.svg",
+    "floors": [
+      "Basement",
+      "Ground_Level",
+      "First_Floor",
+      "Second_Floor"
+    ]
+  }
+]

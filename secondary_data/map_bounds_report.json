@@ -1,0 +1,200 @@
+{
+  "Customs.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      1062.4827,
+      535.17401
+    ],
+    "real_x_range": [
+      -464.8,
+      1011.1
+    ],
+    "real_y_range": [
+      -656.1,
+      1059.7
+    ],
+    "real_width": 1475.9,
+    "real_height": 1715.7
+  },
+  "Factory.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      130.81831,
+      141.23242
+    ],
+    "real_x_range": [
+      -70.4,
+      130.1
+    ],
+    "real_y_range": [
+      -71.3,
+      130.1
+    ],
+    "real_width": 200.5,
+    "real_height": 201.4
+  },
+  "GroundZero.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      348.92543,
+      488.44792
+    ],
+    "real_x_range": [
+      -98.5,
+      488.4
+    ],
+    "real_y_range": [
+      -85.9,
+      488.4
+    ],
+    "real_width": 586.9,
+    "real_height": 574.4
+  },
+  "Interchange.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      1127.6852,
+      947.02582
+    ],
+    "real_x_range": [
+      -545.5,
+      1127.7
+    ],
+    "real_y_range": [
+      -521.7,
+      1170.2
+    ],
+    "real_width": 1673.2,
+    "real_height": 1691.9
+  },
+  "Labs.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      720.0,
+      586.0
+    ],
+    "real_x_range": [
+      -419.0,
+      697.0
+    ],
+    "real_y_range": [
+      -339.0,
+      697.0
+    ],
+    "real_width": 1116.0,
+    "real_height": 1036.0
+  },
+  "Lighthouse.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      1059.3752,
+      1722.9499
+    ],
+    "real_x_range": [
+      -238.6,
+      1571.2
+    ],
+    "real_y_range": [
+      -347.4,
+      1723.0
+    ],
+    "real_width": 1809.8,
+    "real_height": 2070.3
+  },
+  "Reserve.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      827.28742,
+      761.16437
+    ],
+    "real_x_range": [
+      -441.1,
+      813.6
+    ],
+    "real_y_range": [
+      -108.9,
+      738.8
+    ],
+    "real_width": 1254.7,
+    "real_height": 847.7
+  },
+  "Shoreline.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      1559.5717,
+      1032.4935
+    ],
+    "real_x_range": [
+      -293.4,
+      1533.3
+    ],
+    "real_y_range": [
+      -157.5,
+      1542.7
+    ],
+    "real_width": 1826.7,
+    "real_height": 1700.2
+  },
+  "StreetsOfTarkov.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      605.32395,
+      831.57753
+    ],
+    "real_x_range": [
+      -451.0,
+      803.5
+    ],
+    "real_y_range": [
+      -173.9,
+      815.8
+    ],
+    "real_width": 1254.5,
+    "real_height": 989.8
+  },
+  "Terminal.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      887.70096,
+      1043.9554
+    ],
+    "real_x_range": [
+      -533.9,
+      1044.0
+    ],
+    "real_y_range": [
+      -533.9,
+      921.3
+    ],
+    "real_width": 1577.8,
+    "real_height": 1455.1
+  },
+  "Woods.svg": {
+    "viewBox": [
+      0.0,
+      0.0,
+      1472.7926,
+      1420.5995
+    ],
+    "real_x_range": [
+      -261.6,
+      1452.3
+    ],
+    "real_y_range": [
+      -265.8,
+      1459.5
+    ],
+    "real_width": 1713.9,
+    "real_height": 1725.4
+  }
+}
